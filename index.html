@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Benim Tek Sayfalık Sitem</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #f4f4f4;
+    }
+    header {
+      background: linear-gradient(135deg, #2563eb, #38bdf8);
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 { font-size: 2.2rem; margin-bottom: 10px; }
+    header p { font-size: 1rem; opacity: 0.9; }
+
+    nav {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 10px 15px;
+      gap: 15px;
+      justify-content: center;
+    }
+    nav a {
+      text-decoration: none;
+      color: #374151;
+      font-size: 0.95rem;
+      padding: 5px 10px;
+      border-radius: 999px;
+      transition: background 0.2s, color 0.2s;
+    }
+    nav a:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 20px auto 40px;
+      padding: 0 15px;
+    }
+    section {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.05);
+    }
+    section h2 {
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+      color: #111827;
+    }
+    section p { font-size: 0.98rem; color: #4b5563; }
+
+    .btn-primary {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: #2563eb;
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primary:hover { opacity: 0.9; }
+
+    /* Kart örneği */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 15px;
+      margin-top: 10px;
+    }
+    .card {
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+      padding: 15px;
+      background: #f9fafb;
+    }
+    .card h3 {
+      margin-bottom: 5px;
+      font-size: 1.05rem;
+      color: #111827;
+    }
+    .card p {
+      font-size: 0.9rem;
+      color: #4b5563;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.85rem;
+      color: #6b7280;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.7rem; }
+      nav ul { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>BNS Store</h1>
+    <p>Kısa açıklama: Web geliştirici / Amazon satıcısı / Portföy sitesi vb.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#hakkimda">Hakkımda</a></li>
+      <li><a href="#hizmetler">Hizmetler</a></li>
+      <li><a href="#projeler">Projeler</a></li>
+      <li><a href="#iletisim">İletişim</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="hakkimda">
+      <h2>Hakkımda</h2>
+      <p>
+        Buraya kendinle ilgili kısa bir yazı yazabilirsin. Örneğin:
+        “Amazon SP-API, Java Spring Boot, Redis ve PostgreSQL ile entegrasyonlar geliştiren bir yazılım geliştiricisiyim.”
+      </p>
+    </section>
+
+    <section id="hizmetler">
+      <h2>Hizmetler</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Amazon Entegrasyonları</h3>
+          <p>SP-API ile ürün, stok, fiyat ve sipariş entegrasyonu.</p>
+        </div>
+        <div class="card">
+          <h3>Web Geliştirme</h3>
+          <p>Java, Spring Boot, React ve modern web teknolojileri.</p>
+        </div>
+        <div class="card">
+          <h3>Danışmanlık</h3>
+          <p>Dropshipping, depo süreçleri ve otomasyon danışmanlığı.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projeler">
+      <h2>Projeler</h2>
+      <p>Buraya GitHub / GitLab projelerini veya yaptığın işleri listeleyebilirsin.</p>
+      <ul>
+        <li>SellerFlash entegrasyon otomasyonu</li>
+        <li>Amazon SP-API token yönetim sistemi</li>
+        <li>Redis kuyruk tabanlı rating & review çekme sistemi</li>
+      </ul>
+      <a class="btn-primary" href="https://github.com/" target="_blank" rel="noopener noreferrer">
+        GitHub Profilim
+      </a>
+    </section>
+
+    <section id="iletisim">
+      <h2>İletişim</h2>
+      <p>E-posta: <a href="mailto:ornek@mail.com">ornek@mail.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">Profil Linki</a></p>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> BNS Store. Tüm hakları saklıdır.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
